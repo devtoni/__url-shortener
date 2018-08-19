@@ -1,0 +1,19 @@
+service: url-shortener-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: eu-west-1
+
+#plugins:
+#  - serverless-offline
+
+functions:
+  api: 
+    handler: src/application/index.handler
+    events: 
+      - http: 
+          path: api/url
+          method: post
+          cors: true
+          integration: lambda
