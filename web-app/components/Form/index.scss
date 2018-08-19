@@ -1,0 +1,8 @@
+.Form {
+    &-content {
+        align-items: baseline;
+        display: grid;
+        grid-column-gap: 20px;
+        grid-template-columns: auto 100px;
+    }
+}
